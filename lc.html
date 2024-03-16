@@ -364,7 +364,7 @@
                             <span class="d-block mb-5 text-body-tertiary">Адрес</span>
                             <span class="d-block">Россия, г. Москва, ул. Цветочная 36-98</span>
                         </p>
-                        <button
+                        <button data-bs-toggle="modal" data-bs-target="#qiuckViewWindow"
                             class="btn btn-slideup-dark click-to-active rounded-pill pt-4 pb-4 pe-9 ps-9 pt-sm-6 pb-sm-6 pe-sm-20 ps-sm-20 ">
                             <span class="btn-text">
                                 <span class="ms-0 lh-base fs-sm-8 fs-11 text-center text-nowrap">редактировать</span>
@@ -385,6 +385,47 @@
             </div>
         </div>
     </section>
+
+    <!-- qiock-view -->
+    <div class="modal modal-md fade lc-edit" id="qiuckViewWindow" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content overflow-hidden rounded-2">
+                <div class="container p-15">
+                    <h3 class="h4 fw-semibold mb-15">Редактировать данные</h3>
+                    <label for="name" class="mb-7 d-block">
+                        <span>Имя*</span>
+                        <input class="form-control mt-5 form-control-lg px-12" type="text" required name="name" id="name"
+                            placeholder="Имя">
+                    </label>
+                    <label for="sname" class="mb-7 d-block">
+                        <span>Фамилия*</span>
+                        <input class="form-control mt-5 form-control-lg px-12" type="text" required name="sname" id="sname"
+                            placeholder="Фамилия">
+                    </label>
+                    <label for="email" class="mb-7 d-block">
+                        <span>Почта*</span>
+                        <input class="form-control mt-5 form-control-lg px-12" type="email" required name="email" id="email"
+                            placeholder="Ваш email">
+                    </label>
+                    <label for="email" class="mb-7 d-block">
+                        <span>Телефон</span>
+                        <input class="form-control mt-5 form-control-lg px-12" type="tel" name="email" id="email"
+                            placeholder="+7 (000) 000-00-00">
+                    </label>
+                    <label for="email" class="mb-7 d-block">
+                        <span>Адрес</span>
+                        <input class="form-control mt-5 form-control-lg px-12" type="text" required name="email" id="email"
+                            placeholder="Город, улица, квартира">
+                    </label>
+                    <div class="d-flex mt-15 justify-content-between">
+                        <button type="reset" class="btn btn-sm rounded-pill col-5 mx-auto">отменить</button>
+                        <button type="submit" class="btn btn-sm btn-dark rounded-pill col-6">сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
