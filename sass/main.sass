@@ -1,0 +1,46 @@
+.bredcums
+    list-style: none
+    padding: 0
+    &-back
+        margin-right: 20px
+
+    &-item:not(.bredcums-back, .bredcums-item:last-of-type)
+        &::after
+            content: '—'
+            margin-right: 5px
+
+    &-main
+        a
+            color: var(--bs-gray-500)
+        &::after
+            color: var(--bs-gray-500)
+
+.lc
+    &-box
+
+    &-content
+        margin: 0 auto
+    &-aside
+        max-width: 293px
+
+    &-nav
+        border-bottom: 1px solid #E2E8F0
+        padding-bottom: 1px
+        margin-bottom: 15px
+        &__link
+            padding: 10px 15px
+            display: block
+            border-radius: 8px
+            margin-bottom: 15px
+            &.is_active
+                border: 1px solid #E2E8F0
+                background-color: rgba(var(--bs-secondary-bg-rgb), 1)
+                &::after
+                    content: ''
+                    display: inline-block
+                    vertical-align: middle
+                    width: 8px
+                    height: 8px
+                    border-radius: 50%
+                    margin-left: 10px
+                    background-color: rgb(var(--bs-danger-rgb))
