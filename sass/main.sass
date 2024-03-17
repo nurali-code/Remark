@@ -60,4 +60,22 @@ header
                 white-space: nowrap
                 padding: 6px 8px
                 margin: 0
-        
+
+.option-switcher
+    border: var(--bs-border-width) solid var(--bs-gray-50)
+    background-color: rgba(var(--bs-white-rgb), 1)
+    &__item
+
+        label
+            display: block
+            padding: 13px 20px
+            border-radius: 10px
+            transition: all ease .3s
+            line-height: 125%
+            border: var(--bs-border-width) solid transparent
+
+        input
+            display: none
+            &:checked ~ label
+                border-color: var(--bs-gray-50)
+                background-color: rgba(var(--bs-secondary-bg-rgb), 1)

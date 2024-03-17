@@ -364,7 +364,7 @@
                             <span class="d-block mb-3 mb-lg-5 text-body-tertiary">Адрес</span>
                             <span class="d-block">Россия, г. Москва, ул. Цветочная 36-98</span>
                         </p>
-                        <button data-bs-toggle="modal" data-bs-target="#qiuckViewWindow"
+                        <button data-bs-toggle="modal" data-bs-target="#lcEdit"
                             class="btn btn-slideup-dark click-to-active rounded-pill pt-4 pb-4 pe-9 ps-9 pt-sm-6 pb-sm-6 pe-sm-20 ps-sm-20 ">
                             <span class="btn-text">
                                 <span class="ms-0 lh-base fs-sm-8 fs-11 text-center text-nowrap">редактировать</span>
@@ -394,7 +394,7 @@
     </section>
 
     <!-- qiock-view -->
-    <div class="modal modal-md fade lc-edit" id="qiuckViewWindow" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal modal-md fade lc-edit" id="lcEdit" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content overflow-hidden rounded-2">
@@ -405,16 +405,26 @@
                         <input class="form-control mt-5 form-control-lg px-12" type="text" required name="name"
                             id="name" placeholder="Имя">
                     </label>
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="btn-group btn-group-toggle p-1 border-1" data-toggle="buttons">
-                                <label class="btn px-10 active">
-                                    <input type="radio" name="options" class="d-none" id="option1" autocomplete="off" checked> М
-                                </label>
-                                <label class="btn px-10">
-                                    <input type="radio" name="options" class="d-none" id="option2" autocomplete="off"> Ж
-                                </label>
+                    <div class="row mb-7">
+                        <div class="col-5">
+                            <span>Имя*</span>
+                            <div class="option-switcher d-inline-flex rounded-2 p-1">
+                                <div class="option-switcher__item">
+                                    <input type="radio" checked name="toggler" id="toggler1">
+                                    <label for="toggler1" class="fs-7 fs-lg-6">М</label>
+                                </div>
+                                <div class="option-switcher__item">
+                                    <input type="radio" name="toggler" id="toggler2">
+                                    <label for="toggler2" class="fs-7 fs-lg-6">Ж</label>
+                                </div>
                             </div>
+                        </div>
+                        <div class="col-7">
+                            <!-- <label for="name" class="d-block"> -->
+                            <span>Имя*</span>
+                            <input class="form-control mt-5 form-control-lg px-12" type="text" required name="name"
+                                id="name" placeholder="Имя">
+                            <!-- </label> -->
                         </div>
                     </div>
                     <label for="sname" class="mb-7 d-block">
@@ -438,8 +448,8 @@
                             id="email" placeholder="Город, улица, квартира">
                     </label>
                     <div class="d-flex mt-15 justify-content-between">
-                        <button type="reset" class="btn btn-sm rounded-pill col-5 mx-auto">отменить</button>
-                        <button type="submit" class="btn btn-sm btn-dark rounded-pill col-6">сохранить</button>
+                        <button type="reset" class="btn btn-sm rounded-pill col-5 px-5">отменить</button>
+                        <button type="submit" class="btn btn-sm btn-dark rounded-pill col-6 px-5">сохранить</button>
                     </div>
                 </div>
             </div>
