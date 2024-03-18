@@ -22,12 +22,34 @@
             height: 54px
             background-color: transparent
 
-        .modal-dialog
-            min-height: 90%
-            display: flex
-            align-items: center
-        &.show .modal-dialog
-            
+        .close
+            background-color: transparent
+            font-size: 40px
+            border: none
+            line-height: 12px
+        .modal
+            &-content
+                border-radius: 12px
+
+            &-dialog
+                // min-height: 90%
+                // align-items: center
+
+        @media screen and ( max-width: 992px )
+            .modal
+                &-dialog
+                    min-height: 100%
+                    margin: 0 auto
+                    align-items: flex-end
+
+                &-content
+                    border-radius: 12px 12px 0 0
+
+            &.fade .modal-dialog
+                transform: translate(0, 50px)
+
+            &.show .modal-dialog
+                transform: none
 
     &-nav
         border-bottom: 1px solid var(--bs-gray-50)
@@ -113,7 +135,7 @@
     label
         display: block
         width: 100%
-        padding: 11px 50px 11px 20px
+        padding: 8px 50px 9px 20px
         &::before,
         &::after
             content: ''
@@ -146,3 +168,25 @@
                 opacity: 1
             &::after
                 border-color: var(--bs-primary)
+
+    &:hover
+        background-color: #F1F1F1
+
+.ddown
+    &-btn
+        display: flex
+        justify-content: space-between
+        width: 100%
+        color: rgba(var(--bs-dark-rgb), .5)
+        svg
+            transition: all ease .3s
+        &.is_active
+            color: rgba(var(--bs-dark-rgb), 1)
+            &.border
+                border-color: var(--bs-gray-900) !important
+            svg
+                transform: rotate(180deg)
+
+    &-content
+        overflow: hidden
+        transition: all ease .3s
